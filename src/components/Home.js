@@ -54,7 +54,7 @@ const Home = () => {
         <Grid container doubling stackable columns="equal" verticalAlign="bottom">
           <Grid.Column>
             <Grid.Row className="guild_value" textAlign="center">
-              <Statistic inverted>
+              <Statistic>
                 <Statistic.Label>Guild Bank Value</Statistic.Label>
                 <Statistic.Value>
                   {convertWeiToDollars(guildBankValue, exchangeRate)}
@@ -62,7 +62,7 @@ const Home = () => {
               </Statistic>
             </Grid.Row>
             <Grid.Row className="pool_value" textAlign="center">
-              <Statistic size="tiny" inverted>
+              <Statistic size="tiny">
                 <Statistic.Label>Moloch Pool Value</Statistic.Label>
                 <Statistic.Value>{convertWeiToDollars(poolValue, exchangeRate)}</Statistic.Value>
               </Statistic>
@@ -83,20 +83,20 @@ const Home = () => {
           </Grid.Column>
         </Grid>
 
+        <div class="spacer"></div>
+
         <Grid container stackable columns={3} className="blurred box">
           <Grid.Column textAlign="center">
-            <Statistic inverted label="Total Shares" value={totalShares} />
+            <Statistic label="Total Shares" value={totalShares} />
           </Grid.Column>
           <Grid.Column textAlign="center">
             <Statistic
-              inverted
               label="Total ETH"
               value={parseFloat(utils.formatEther(guildBankValue)).toFixed(0)}
             />
           </Grid.Column>
           <Grid.Column textAlign="center">
             <Statistic
-              inverted
               label="Share Value"
               value={convertWeiToDollars(shareValue, exchangeRate)}
             />

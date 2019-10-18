@@ -63,7 +63,6 @@ const Donate = ({ token, molochPool, loggedInUser, disabled }) => {
       <Modal.Content>
         <p>Thank you for your donation! Use the wETH Center to wrap and approve.</p>
         <Input
-          inverted
           labelPosition="right"
           label={`${myWeth}w${EtherSymbol}`}
           placeholder="wETH to Donate"
@@ -72,7 +71,7 @@ const Donate = ({ token, molochPool, loggedInUser, disabled }) => {
         />
       </Modal.Content>
       <Modal.Actions>
-        <Button color="green" inverted onClick={donate}>
+        <Button color="green" onClick={donate}>
           <Icon name="checkmark" /> Donate
         </Button>
       </Modal.Actions>
@@ -84,7 +83,6 @@ const Sync = ({ molochPool, lastProcessedProposalIndex, currentPoolIndex, logged
   const synced = currentPoolIndex >= lastProcessedProposalIndex;
   return (
     <Popup
-      inverted
       content={
         synced
           ? `Fully synced to current proposal ${lastProcessedProposalIndex}`
@@ -169,7 +167,7 @@ export default function Pool({ loggedInUser }) {
       <Grid container verticalAlign="middle" textAlign="center">
         <Grid container doubling stackable columns="equal" verticalAlign="bottom">
           <Grid.Column>
-            <Statistic inverted>
+            <Statistic>
               <Statistic.Label>Moloch Pool Value</Statistic.Label>
               <Statistic.Value>{convertWeiToDollars(poolValue, exchangeRate)}</Statistic.Value>
             </Statistic>
@@ -202,18 +200,16 @@ export default function Pool({ loggedInUser }) {
 
         <Grid container stackable columns={3} className="blurred box">
           <Grid.Column textAlign="center">
-            <Statistic inverted label="Total Pool Shares" value={totalPoolShares} />
+            <Statistic label="Total Pool Shares" value={totalPoolShares} />
           </Grid.Column>
           <Grid.Column textAlign="center">
             <Statistic
-              inverted
               label="Total Pool ETH"
               value={parseFloat(utils.formatEther(poolValue)).toFixed(2)}
             />
           </Grid.Column>
           <Grid.Column textAlign="center">
             <Statistic
-              inverted
               label="Pool Share Value"
               value={convertWeiToDollars(poolShareValue, exchangeRate)}
             />

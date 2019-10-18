@@ -119,13 +119,12 @@ class SubmitModal extends Component {
           <Button
             basic
             color="green"
-            inverted
             onClick={handleSubmit}
             disabled={submittedTx || !depositApproved || !beneficiaryApproved}
           >
             <Icon name="check" /> Submit
           </Button>
-          <Button basic color="red" inverted onClick={this.handleClose}>
+          <Button basic color="red" onClick={this.handleClose}>
             <Icon name="remove" /> Close
           </Button>
         </Modal.Actions>
@@ -282,7 +281,6 @@ export default class ProposalSubmission extends Component {
                   name="title"
                   transparent
                   size="big"
-                  inverted
                   placeholder="Proposal Title"
                   onChange={this.handleInput}
                   value={title}

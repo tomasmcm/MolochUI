@@ -15,6 +15,7 @@ import { utils } from "ethers";
 import { monitorTx } from "../helpers/transaction";
 import { formatEther } from "ethers/utils";
 import gql from "graphql-tag";
+import MolochLogo from "../assets/Logo.svg"
 
 const MainMenu = ({
   _handleOpenDropdown,
@@ -487,7 +488,9 @@ export default ({ loggedInUser, client }) => {
           </a>
         </Grid.Column>
         <Grid.Column textAlign="center" className="logo">
-          <Link to="/">MOLOCH</Link>
+          <Link to="/">
+            <img src={MolochLogo} alt="thisDAO"/>
+          </Link>
         </Grid.Column>
         <Grid.Column textAlign="center" className="dropdown">
           <Dropdown

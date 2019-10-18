@@ -1,7 +1,8 @@
 body {
-  color: white;
+  color: #000;
   font-weight: bold;
   font-family: "GT Haptik", sans-serif !important;
+  background-color: #f8fafc;
 }
 
 .amount {
@@ -18,7 +19,7 @@ body {
 }
 
 .threeboxProfileHover__style_boxShortAddress {
-  color: white;
+  color: black;
 }
 
 .ui.statistic>.value, .ui.statistics .statistic>.value {
@@ -33,9 +34,19 @@ body {
 }
 
 .button {
-  padding: 20px 45px !important;
-  &.grey {
-    background: rgba(50, 50, 50, 0.9) !important;
+  padding: 20px 45px;
+
+  &.ui.grey {
+    // background: rgba(50, 50, 50, 0.9) !important;
+    border: 2px solid #000;
+    border-radius: 15px;
+    color: #000;
+    padding: 8px 15px;
+    background-color: #fff;
+    &:hover {
+      color: #2567a4;
+      background-color: #fff;
+    }
   }
 }
 
@@ -55,16 +66,21 @@ body {
 }
 
 .blurred {
-  background: rgba(100, 100, 100, 0.9) !important;
+  background: white !important;
 }
 
 .transparent {
   background: transparent !important;
 }
+.spacer {
+  height: 70px;
+}
 
 .blurred.box {
-  background: rgba(100, 100, 100, 0.4) !important;
+  background: white !important;
   padding: 30px;
+  border: 2px solid #d4e1ed;
+  border-radius: 15px;
 }
 
 #background {
@@ -77,7 +93,6 @@ body {
     z-index: -2;
     background: url("assets/moloch_owl.jpg") 0 / cover fixed;
     background-repeat: repeat !important;
-    filter: blur(12px);
   }
 
   .dark_overlay {
@@ -100,9 +115,17 @@ body {
     font-size: 20px;
   }
   .right_dropdown>.text {
-    background-color: teal !important;
-    padding: 8px 12px !important;
+    background-color: white !important;
+    border: 2px solid #000;
+    
+    color: #000;
+    padding: 6px 15px;
+    background-color: #fff;
+    
     border-radius: 50px !important;
+    &:hover {
+      color: #2567a4;
+    }
   }
   .logo {
     font-size: 20px;
@@ -126,7 +149,7 @@ body {
       font-weight: normal;
       input {
         background: rgba(255, 255, 255, 0.1);
-        color: white;
+        color: black;
         margin-bottom: 5px;
       }
       .button {
@@ -175,7 +198,7 @@ body {
     }
   }
   .text_link {
-    color: #fff !important;
+    color: #000 !important;
   }
 
   
@@ -378,11 +401,11 @@ body {
     }
 
     .item {
-      color: #fff;
+      color: #000;
     }
 
     .active.item {
-      border-color: #fff;
+      border-color: #000;
     }
   }
 
@@ -545,10 +568,10 @@ body {
 #proposal_submission {
   input, textarea, select, .dropdown {
     background: rgba(255, 255, 255, 0.1);
-    color: white;
+    color: black;
   }
   label {
-    color: white;
+    color: black;
     opacity: 0.5;
   }
   i {

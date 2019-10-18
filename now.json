@@ -1,0 +1,20 @@
+{
+  "alias": [
+    "thisdao.now.sh"
+  ],
+  "build": {
+    "env": {
+      "REACT_APP_GRAPH_NODE_URI": "@react_app_graph_node_uri",
+      "REACT_APP_ETH_URL": "@react_app_eth_url",
+      "REACT_APP_DEPOSIT_WETH": "@react_app_deposit_weth",
+      "REACT_APP_MOLOCH_ADDRESS": "@react_app_moloch_address",
+      "REACT_APP_MEDIANIZER_ADDRESS": "@react_app_medianizer_address",
+      "REACT_APP_TOKEN_ADDRESS": "@react_app_token_address",
+      "REACT_APP_GUILD_BANK_ADDRESS": "@react_app_guild_bank_address",
+      "REACT_APP_MOLOCH_POOL_ADDRESS": "@react_app_moloch_pool_address"
+    }
+  },
+  "github": {
+    "silent": true
+  }
+}

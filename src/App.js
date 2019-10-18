@@ -60,7 +60,6 @@ const Routes = () => {
   const { loggedInUser } = data;
   return (
     <>
-      <Background />
       <Grid container>
         <Grid.Row>
           <Header loggedInUser={loggedInUser} client={client} />
